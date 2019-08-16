@@ -1,0 +1,256 @@
+#product-filter:before, #products .content:before, #products .content li .product-info:before {
+  content: "";
+  display: table;
+}
+#product-filter:after, #products .content:after, #products .content li .product-info:after {
+  content: "";
+  display: table;
+  clear: both;
+  zoom: 1;
+}
+
+@-webkit-keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: scale(0);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+@-moz-keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: scale(0);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+@-ms-keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: scale(0);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+@keyframes scaleIn {
+  0% {
+    opacity: 0;
+    transform: scale(0);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+@-webkit-keyframes scaleOut {
+  0% {
+    opacity: 0;
+    transform: scale(1);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(0);
+  }
+}
+@-moz-keyframes scaleOut {
+  0% {
+    opacity: 0;
+    transform: scale(1);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(0);
+  }
+}
+@-ms-keyframes scaleOut {
+  0% {
+    opacity: 0;
+    transform: scale(1);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(0);
+  }
+}
+@keyframes scaleOut {
+  0% {
+    opacity: 0;
+    transform: scale(1);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(0);
+  }
+}
+section {
+  height: 560px;
+  margin: 0 auto;
+  background: #555;
+  padding: 1em;
+  overflow: hidden;
+}
+section div {
+  margin: 0 0 2em 0;
+}
+
+.search-form {
+  text-align: right;
+}
+.search-form input, .search-form button {
+  border: none;
+  padding: 0.5em;
+  background: rgba(255, 255, 255, 0.5);
+  color: #555;
+}
+
+.wrap {
+  background: #888;
+  margin-right: 0.5em;
+  padding: 0.5em;
+  width: 200px;
+  float: left;
+  transition: 3s;
+}
+.wrap:nth-child(odd) {
+  margin-right: 0;
+}
+.wrap img {
+  display: inline-block;
+}
+.wrap .name {
+  width: 90%;
+  position: relative;
+  left: 1em;
+}
+
+.hide {
+  -webkit-animation: scaleOut 0.5s 0s ease both;
+  -moz-animation: scaleOut 0.5s 0s ease both;
+  -ms-animation: scaleOut 0.5s 0s ease both;
+  -o-animation: scaleOut 0.5s 0s ease both;
+  animation: scaleOut 0.5s 0s ease both;
+}
+
+.show {
+  -webkit-animation: scaleIn 0.5s 0s ease both;
+  -moz-animation: scaleIn 0.5s 0s ease both;
+  -ms-animation: scaleIn 0.5s 0s ease both;
+  -o-animation: scaleIn 0.5s 0s ease both;
+  animation: scaleIn 0.5s 0s ease both;
+}
+
+#container {
+  padding-top: 50px;
+  margin-bottom: 100px;
+}
+
+#product-filter {
+  width: 508px;
+  margin: 0 auto;
+}
+#product-filter .filter-label {
+  color: #B9B9B9;
+  background-color: #383733;
+  border: 1px solid #383733;
+  padding: 0 20px;
+  float: left;
+  line-height: 55px;
+}
+#product-filter .filter-group ul li {
+  color: #A0A0A0;
+  border: 1px solid #dcddde;
+  padding: 0 20px;
+  float: left;
+  line-height: 55px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+#product-filter .filter-group ul li:hover {
+  color: #FFF;
+  border: 1px solid #df5d2b;
+  background: #df5d2b;
+}
+#product-filter .filter-group ul li.active {
+  color: #FFF;
+  border: 1px solid #df5d2b;
+  background: #df5d2b;
+}
+
+#products {
+  margin-top: 50px;
+}
+#products .content {
+  width: 1024px;
+  margin: 0 auto;
+}
+#products .content li {
+  position: relative;
+  width: 328px;
+  margin-right: 20px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  height: auto;
+  margin-bottom: 30px;
+  float: left;
+  text-align: center;
+  font-size: 0;
+  overflow: hidden;
+  border: 6px solid #F0F0F0;
+}
+#products .content li:nth-child(3n) {
+  margin-right: 0;
+}
+#products .content li img {
+  max-width: 100%;
+  height: auto;
+}
+#products .content li .product-info {
+  color: #000;
+  background: #F0F0F0;
+  padding: 18px 5px 12px 5px;
+}
+#products .content li .product-info .name {
+  float: left;
+  font-size: 0.875rem;
+  letter-spacing: 2px;
+  transition: 0.5s;
+}
+#products .content li .product-info .price {
+  float: right;
+  font-size: 0.6875rem;
+  color: #777;
+  letter-spacing: 1px;
+}
+#products .content li .mask {
+  opacity: 0;
+  transition: 0.4s;
+}
+#products .content li .mask .addToCart a {
+  position: absolute;
+  top: 98px;
+  left: 0;
+  right: 0;
+  border-radius: 4px;
+  font-size: 14px;
+  color: #333;
+  border: 2px solid #333;
+  font-weight: 700;
+  padding: 11px 0;
+  width: 145px;
+  margin: 0 auto;
+  transition: 0.5s;
+}
+#products .content li > a {
+  display: block;
+}
+#products .content li:hover img {
+  opacity: 0.5;
+}

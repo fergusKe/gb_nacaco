@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" href="css/main.css"/>
+</head>
+<body>
+	<div class="container">
+    <h1>Real Shadow</h1>
+    by <a href="http://indamix.github.io/">Indamix</a>
+    <p>Module that casts photorealistic shadows. Perfect for eye-catching demos and landing pages.</p>
+    <p>Move the mouse cursor across the page</p>
+
+    <div id="navigation" class="nav"></div>
+    <div id="demo"></div>
+    <div class="test">
+    	<h3>A</h3><h3>B</h3><h3>C</h3>
+    </div>
+    
+</div>
+</body>
+<!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script> -->
+<script src="script/realshadow.js"></script>
+<script src="script/demo.js"></script>
+<script>
+	$('.test').realshadow({
+	    type: 'text'
+	});
+</script>
+</html>

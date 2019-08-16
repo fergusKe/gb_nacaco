@@ -1,0 +1,23 @@
+body
+  display: flex
+  align-items: center
+  justify-content: center
+  width: 100vw
+  height: 100vh
+  
+.btn
+  $gradient: linear-gradient(45deg, pink, skyblue)
+  box-sizing: border-box
+  box-shadow: none
+  border: none
+  font: 2em/1 sans-serif
+  padding: 30px 100px
+  letter-spacing: 5px
+  color: white
+  border: solid 4px transparent
+  border-image: $gradient
+  border-image-slice: 1
+  background: $gradient
+  -webkit-background-clip: text
+  background-clip: text
+  text-fill-color: transparent

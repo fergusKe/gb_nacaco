@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Nacaco</title>
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/about.css">
+    <link rel="stylesheet" href="css/sample.css">
+    <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+</head>
+
+<body>
+    <div id="wrapper">
+        <header>
+            <div id="logo">
+                <a href="index.htm">
+                    <img src="images/default/Nacaco.png">
+                </a>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.htm">首頁</a></li>
+                    <li><a href="about.htm">關於</a></li>
+                    <li><a href="shop.htm">商品</a></li>
+                    <li><a href="faq.htm">常見問題</a></li>
+                    <li><a href="contact.htm">聯絡我們</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <div id="container">
+            <div class="section">
+                <div class="left-img">
+                    <img src="images/about/002.jpg">
+                </div>
+                <div class="right-text">
+                    <h2>關於NACACO</h2>
+                    <p>關於「襪子的故鄉-社頭」，你也許已經知道很多，也許知道很少。有些人覺得沒有香港腳襪子不穿也沒有關係、不管是中國製還是越南製買便宜就好、高機能的襪子一定要買日本品牌的才有效…，其實除了全台灣襪子80％來自彰化社頭，社頭也代工生產世界各國的訂單。工研院材料與化工研究所奈米纖維材料研究室主任羅立清博士表示，台灣的紡織業一年幫台灣賺進6300億元，全世界七成的面料(機能性紡織品)都為台灣製造，藉由產官學的合作，已經開發出許多高附加價值兼具市場競爭力的機能性襪品；有職業足球員的運動襪，為了做得夠耐磨，甚至要用到防彈衣的材質；也有廠商在做重機騎士穿的機車襪，為保護他們在意外發生時的安全，不僅要抗磨還得做到全身一體成型；甚至瑞士品牌可直接取代球鞋的運動襪，要價6000元，同樣出自MIT台灣製！</p>
+                    <p>NACACO襪品希望在羅博士的帶領下，與泉樺針織、台灣黑狗兄OH9等襪廠先進們，一同推動「台灣製造，品質保證」的襪品，讓更多人不再花冤枉錢買國外品牌的機能襪，也不用擔心買到把腳染黑傷身的劣質襪品；利用網路廣大鄉民的力量，推廣更多正確的穿襪與襪品的知識、更多親民平價的機能性襪品！</p>
+                </div>
+            </div>
+            <div class="banner"></div>
+            <div class="character">
+                <img src="images/about/FB.jpg">
+            </div>
+        </div>
+
+        <footer>
+            <div class="footerCont">
+                <div class="f_list">
+                    <ul>
+                        <li class="title">CUSTOMER CARE</li>
+                        <li><a href="javascript:;">會員常見問題</a>
+                        </li>
+                        <li><a href="javascript:;">購物常見問題</a>
+                        </li>
+                        <li><a href="javascript:;">聯絡我們</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="f_list">
+                    <ul>
+                        <li class="title">ORDER & SHIPPING</li>
+                        <li><a href="javascript:;">配送取貨問題</a>
+                        </li>
+                        <li><a href="javascript:;">退換貨及退款</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="f_list">
+                    <ul>
+                        <li class="title">NEWSLETTER</li>
+                        <li>
+                            <input class="letter" type="text" placeholder="e-mail address">
+                            <input class="letter-btn" type="submit" value="送出">
+                        </li>
+                        <!-- <li>
+                            <a href="javascript:;">
+                                <div class="fa fa-facebook-square fa-size"></div>FACEBOOK</a>
+                        </li> -->
+                    </ul>
+                </div>
+            </div>
+        </footer>
+    </div>
+</body>
+<script src="script/jquery.1.9.0.min.js"></script>
+<script>
+$(function() {
+    
+    $(window).resize(function() {
+        var wH = $(this).height();
+        var headerH = $('header').height();
+        var footerH = $('footer').height();
+        var minH = wH - headerH - footerH - 50 - 100 + 300;
+        $('#container').css('min-height', minH > 0 ? minH : '');
+    }).resize();
+
+})
+</script>
+
+</html>

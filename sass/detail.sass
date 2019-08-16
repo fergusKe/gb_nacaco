@@ -1,0 +1,226 @@
+@import compass
+@import variable
+@import mixin
+@import extend
+@import animate
+
+.product-images
+	@extend %clearfix
+	background: #F0F0F0
+	font-size: 0
+	text-align: center
+	.zoom-area
+		@extend %clearfix
+		position: relative
+		width: 500px
+		height: 508px
+		margin: 30px auto 0
+		overflow: hidden
+		.zoom-small-image
+			position: absolute
+			top: 0
+			left: 0
+			opacity: 0
+			transition: 1s
+			// display: none
+			img
+				width: 100%
+			&.active
+				opacity: 1
+				// display: block
+.btn-area
+	position: relative
+	width: 1000px
+	margin: 0 auto
+	line-height: 50px
+	.btn
+		position: absolute
+		width: 104px
+		right: 0px
+		z-index: 1
+	a
+		display: block
+		background: #F0F0F0
+		margin-left: 2px
+		text-align: center
+		line-height: 56px
+		width: 50px
+		height: 50px
+		border: none
+		float: left
+		overflow: hidden
+		&:hover
+			background: #DBDBDB
+		i
+			content: ""
+			width: 0
+			height: 0
+			display: inline-block
+			font-size: 0
+			overflow: hidden
+	.prevBtn
+		i
+			border-top: 4px solid transparent
+			border-right: 5px solid #000
+			border-bottom: 4px solid transparent
+
+	.nextBtn
+		i
+			border-top: 4px solid transparent
+			border-left: 5px solid #000
+			border-bottom: 4px solid transparent
+.product-details
+	position: relative
+	width: 1000px
+	margin: 0 auto 100px
+	// padding-top: 42px
+.product-title
+	@extend %clearfix
+	position: relative
+	margin-top: -1.25rem
+	margin-bottom: 42px
+	text-align: center
+	font-size: 0.875rem
+	line-height: 1.125rem
+	color: #000
+	letter-spacing: 1px
+	span
+		display: inline-block
+		color: #000
+		font-size: 1.5rem
+		line-height: 1
+		letter-spacing: 3px
+		background: #fff
+		border-color: #333
+		border-style: solid
+		border-width: 0.125rem
+		padding: 8px 0 6px
+		width: 297px
+		position: absolute
+		left: 0
+		right: 0
+		margin: 0 auto
+		z-index: 9999
+.info-list
+	display: inline-block
+	vertical-align: top
+	width: 300px
+	line-height: 1.6
+	color: rgba(0,0,0,0.5)
+	h4
+		margin-top: 30px
+		margin-bottom: 10px
+		color: #000
+	&~.info-list
+		margin-left: 50px
+.color-list
+	font-size: 0
+	li
+		display: inline-block
+		// width: 25px
+		// height: 25px
+		// background: #000
+		a
+			float: left
+			border: 2px solid #fff
+			padding: 2px
+			margin: 0 5px 5px 0
+			&:hover
+				border-color: #ccc
+			span
+				text-align: left
+				text-indent: -999px
+				height: 25px
+				width: 25px
+				display: block
+		&.selected
+			a
+				border-color: #000
+.qtyBtn
+	width: 60px
+	position: relative
+	margin: 0 auto
+	overflow: hidden
+	zoom: 1
+	display: inline-block
+	.minus
+		bottom: 0
+		right: 0
+		display: block
+		padding: 0
+		margin: 0
+		position: absolute
+		text-align: center
+		vertical-align: text-top
+		width: 20px
+		height: 15px
+		overflow: visible
+		text-decoration: none
+		font-weight: bold
+		cursor: pointer
+		line-height: 13px
+		font-size: 10px
+		border: none
+		outline: none
+		background: #333
+		color: #fff
+		&:hover
+			background: #000
+	.qty
+		// background-color: #fff
+		// color: #333
+		// border-color: #ccc
+		width: 40px
+		height: 28px
+		float: left
+		padding: 0
+		text-align: center
+		border: 1px solid #ddd
+		margin: 0
+		box-sizing: border-box
+		background-color: #fff
+		color: rgba(0,0,0,0.5)
+		font-size: 0.6875rem
+	.plus
+		top: 0
+		right: 0
+		border-bottom: 0
+		display: block
+		padding: 0
+		margin: 0
+		position: absolute
+		text-align: center
+		vertical-align: text-top
+		width: 20px
+		height: 15px
+		overflow: visible
+		text-decoration: none
+		font-weight: bold
+		cursor: pointer
+		line-height: 13px
+		font-size: 10px
+		border: none
+		outline: none
+		background: #333
+		color: #fff
+		&:hover
+			background: #000
+.total
+	border: 1px solid #ddd
+	padding: 1em
+	display: block
+	text-align: center
+	max-width: 130px
+	margin-bottom: 3em
+	font-size: 0.6875rem
+.addToCart
+	margin: 0
+	border: none
+	outline: none
+	font-size: 0.625rem
+	letter-spacing: 2px
+	padding: 8px 34px
+	background: #333
+	color: #fff
+	&:hover
+		background: #000

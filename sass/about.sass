@@ -1,0 +1,53 @@
+@import compass
+@import variable
+@import mixin
+@import extend
+@import animate
+
+body
+	background: #F0F0F0
+#container
+	padding-top: 50px
+	margin-bottom: 100px
+.section
+	width: 1000px
+	margin: 0 auto
+	@extend %clearfix
+	.left-img
+		float: left
+		width: 477px
+		// height: 512px
+		padding-top: 0px
+		overflow: hidden
+		text-align: center
+		img
+			width: 100%
+	.right-text
+		float: left
+		width: 450px
+		padding-top: 0px
+		margin-left: 55px
+		h2
+			color: #363636
+			font-size: 18px
+			font-weight: 700
+			letter-spacing: 1px
+			margin-bottom: 10px
+		p
+			color: #959595
+			font-size: 16px
+			line-height: 28px
+			text-indent: 32px
+			margin-bottom: 23px
+.banner
+	height: 397px
+	background: url(../images/about/03.jpg)
+	background-position: center center
+	background-size: cover
+	margin: 100px 0
+.character
+	width: 1000px
+	margin: 0 auto
+	text-align: center
+	img
+		width: 700px

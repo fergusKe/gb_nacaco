@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Nacaco</title>
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/contact.css">
+    <link rel="stylesheet" href="css/sample.css">
+    <link rel="stylesheet" href="css/materialize.min.css">
+    <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+</head>
+
+<body>
+    <div id="wrapper">
+        <header>
+            <div id="logo">
+                <a href="index.htm">
+                    <img src="images/default/Nacaco.png">
+                </a>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.htm">首頁</a></li>
+                    <li><a href="about.htm">關於</a></li>
+                    <li><a href="shop.htm">商品</a></li>
+                    <li><a href="faq.htm">常見問題</a></li>
+                    <li><a href="contact.htm">聯絡我們</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <div id="container">
+            <div id="infoCont">
+                <form method="post" action="contact.aspx" id="ctl00">
+                    <p class="infoTitle">填寫相關資訊</p>
+                    <div class="input-field col s4">
+                        <input name="ctl00$ContentPlaceHolder1$txtName" id="ContentPlaceHolder1_txtName" type="text" class="validate">
+                        <label for="name" class="">姓名</label>
+                    </div>
+                    <div class="sex">
+                        <p class="headline">性別</p>
+                        <table id="ContentPlaceHolder1_RadioButtonList1">
+                            <tbody>
+                                <tr>
+                                    <td><span id="M"><input id="ContentPlaceHolder1_RadioButtonList1_0" type="radio" name="ctl00$ContentPlaceHolder1$RadioButtonList1" value="男生" checked="checked"><label for="ContentPlaceHolder1_RadioButtonList1_0">男生</label></span>
+                                    </td>
+                                    <td><span id="W"><input id="ContentPlaceHolder1_RadioButtonList1_1" type="radio" name="ctl00$ContentPlaceHolder1$RadioButtonList1" value="女生"><label for="ContentPlaceHolder1_RadioButtonList1_1">女生</label></span>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <div class="input-field col s4">
+                        <input name="ctl00$ContentPlaceHolder1$txtPhone" id="ContentPlaceHolder1_txtPhone" type="text" class="validate">
+                        <label for="phone" class="">電話</label>
+                    </div>
+                    <div class="input-field col s4">
+                        <input name="ctl00$ContentPlaceHolder1$txtMail" id="ContentPlaceHolder1_txtMail" type="text" class="validate">
+                        <label for="mail">信箱</label>
+                    </div>
+
+                    <div class="input-field col s12">
+                        <textarea name="ctl00$ContentPlaceHolder1$txtDescription" rows="2" cols="20" id="ContentPlaceHolder1_txtDescription" class="materialize-textarea"></textarea>
+                        <label for="textarea1" class="">留言</label>
+                    </div>
+                    <br>
+                    <br>
+                    <div class="verifyCode">驗證碼</div>
+                    <!-- <table cellpadding="0" cellspacing="0">
+                        <tbody>
+                            <tr>
+                                <td style=" padding:0;">
+                                    <a title="看不清楚？點我更新驗證碼。" tabindex="-1" href="#" onclick="$(this).children('img').prop('src', '/ValidateCode.aspx?t=' + new Date());return false;"><img width="85" src="/ValidateCode.aspx?t=20150626024638">
+                                    </a>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table> -->
+                    <div class="input-field col s4">
+                        <input name="ctl00$ContentPlaceHolder1$txtValidateCode" type="text" maxlength="5" id="ContentPlaceHolder1_txtValidateCode" class="validate">
+                        <label for="verify">輸入驗證碼</label>
+                    </div>
+
+                    <i class="waves-effect waves-light btn Submit waves-input-wrapper" style="" value="送出">
+                        送出
+                        <!-- <input type="submit" name="ctl00$ContentPlaceHolder1$Button1" value="送出" id="ContentPlaceHolder1_Button1" class="waves-button-input"> -->
+                    </i>
+                </form>
+            </div>
+        </div>
+        <footer>
+            <div class="footerCont">
+                <div class="f_list">
+                    <ul>
+                        <li class="title">CUSTOMER CARE</li>
+                        <li><a href="javascript:;">會員常見問題</a>
+                        </li>
+                        <li><a href="javascript:;">購物常見問題</a>
+                        </li>
+                        <li><a href="javascript:;">聯絡我們</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="f_list">
+                    <ul>
+                        <li class="title">ORDER & SHIPPING</li>
+                        <li><a href="javascript:;">配送取貨問題</a>
+                        </li>
+                        <li><a href="javascript:;">退換貨及退款</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="f_list">
+                    <ul>
+                        <li class="title">NEWSLETTER</li>
+                        <li>
+                            <input class="letter" type="text" placeholder="e-mail address">
+                            <input class="letter-btn" type="submit" value="送出">
+                        </li>
+                        <!-- <li>
+                            <a href="javascript:;">
+                                <div class="fa fa-facebook-square fa-size"></div>FACEBOOK</a>
+                        </li> -->
+                    </ul>
+                </div>
+            </div>
+        </footer>
+    </div>
+</body>
+<script src="script/jquery.1.9.0.min.js"></script>
+<script src="script/materialize.min.js"></script>
+<script>
+$(function() {
+    
+    $(window).resize(function() {
+        var wH = $(this).height();
+        var headerH = $('header').height();
+        var footerH = $('footer').height();
+        var minH = wH - headerH - footerH - 50 - 100 + 300;
+        $('#container').css('min-height', minH > 0 ? minH : '');
+    }).resize();
+
+})
+</script>
+
+</html>

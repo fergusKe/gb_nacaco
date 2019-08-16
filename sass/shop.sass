@@ -1,0 +1,155 @@
+@import compass
+@import variable
+@import mixin
+@import extend
+@import animate
+
+body
+	// background: #F0F0F0
+section 
+	// width: 500px
+	height: 560px
+	margin: 0 auto
+	background: #555
+	padding: 1em
+	overflow: hidden
+	div 
+		margin: 0 0 2em 0
+.search-form 
+	text-align: right
+	input
+		border: none
+		padding: .5em
+		background: rgba(255,255,255,.5)
+		color: #555
+button
+	@extend input
+  
+
+
+.wrap 
+	background: #888
+	margin-right: .5em
+	padding: .5em
+	width: 200px
+	float: left
+	transition: 3s
+	&:nth-child(odd) 
+		margin-right: 0
+	img 
+		display: inline-block
+	.name 
+		// display: table-cell
+		width: 90%
+		// vertical-align: middle
+		position: relative
+		left: 1em
+.hide
+	+animate(scaleOut, .5s, 0s)
+.show
+	+animate(scaleIn, .5s, 0s)
+
+
+#container
+	padding-top: 50px
+	margin-bottom: 100px
+#product-filter
+	width: 508px
+	margin: 0 auto 
+	@extend %clearfix
+	.filter-label
+		color: #B9B9B9
+		background-color: #383733
+		border: 1px solid #383733
+		padding: 0 20px
+		float: left
+		line-height: 55px
+	.filter-group
+		ul
+			li
+				color: #A0A0A0
+				// background-color: #383733
+				border: 1px solid #dcddde
+				padding: 0 20px
+				float: left
+				line-height: 55px
+				cursor: pointer
+				transition: .3s
+				&:hover
+					color: #FFF
+					border: 1px solid #df5d2b
+					background: #df5d2b
+				&.active
+					color: #FFF
+					border: 1px solid #df5d2b
+					background: #df5d2b
+
+
+$productSlider-width: 1024px
+$productSlider-margin-bottom: 30px
+#products
+	margin-top: 50px
+	.content
+		width: $productSlider-width
+		margin: 0 auto
+		@extend %clearfix
+		li
+			position: relative
+			+grid(3,20px,$productSlider-width)
+			height: auto
+			// height: 100px
+			margin-bottom: $productSlider-margin-bottom
+			float: left
+			text-align: center
+			font-size: 0
+			overflow: hidden
+			border: 6px solid #F0F0F0
+			img
+				max-width: 100%
+				height: auto
+			.product-info
+				color: #000
+				background: #F0F0F0
+				padding: 18px 5px 12px 5px
+				@extend %clearfix
+				.name
+					float: left
+					font-size: 0.875rem
+					letter-spacing: 2px
+					transition: .5s
+				.price
+					float: right
+					font-size: 0.6875rem
+					color: #777
+					letter-spacing: 1px
+			.mask
+				opacity: 0
+				transition: .4s
+				.addToCart
+					a
+						position: absolute
+						top: 98px
+						left: 0
+						right: 0
+						border-radius: 4px
+						font-size: 14px
+						color: #333
+						border: 2px solid #333
+						font-weight: 700
+						padding: 11px 0
+						width: 145px
+						margin: 0 auto
+						transition: .5s
+						// &:hover
+						// 	background: #df5d2b
+						// 	border: 2px solid #df5d2b
+						// 	color: white
+			&>a
+				display: block
+			&:hover
+				img
+					opacity: .5
+				// .mask
+				// 	opacity: 1
+				// .name
+				// 	color: #df5d2b
